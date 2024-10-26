@@ -1,0 +1,369 @@
+<?php 
+session_start(); // Start the session to track logged-in status
+?>
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Kingrice</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,500,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Kingrice Logo"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="testimonial.html">Testimonial</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                     <?php if (isset($_SESSION['email'])): ?>
+                        <li class="nav-item">
+                           <form method="post" action="logout.php" style="display:inline;">
+                              <button type="submit" class="btn btn-link nav-link" name="logout_user">Logout</button>
+                           </form>
+                        </li>
+                     <?php endif; ?>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Your other content goes here -->
+
+   </body>
+</html>
+
+      <!-- header section end -->
+      <!-- banner section start --> 
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Harakiri<br><span style="color: #980200;">Avacado</span></h1>
+                           <p class="banner_text">Rice is adaptable, easy to grow, and it has a very high yield, making it a terrific crop to grow anywhere and feed a large population. Just one seed of rice will result in over 3,000 grains.</p>
+                           <div class="btn_main">
+                              <div class="started_text"><a href="#">Read More</a></div>
+                              <div class="arrow_bt"><a href="#"><i class="fa fa-arrow-right"></i></a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="images/banner-img.png"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Thailand <br><span style="color: #980200;">Food</span></h1>
+                           <p class="banner_text">Rice contributes over 20% of the calories consumed by humans each year. Korean bibimbap, Nigerian jollof, Indian biryani, Spanish paella, and countless other culinary masterpieces all begin with rice.</p>
+                           <div class="btn_main">
+                              <div class="started_text"><a href="#">Read More</a></div>
+                              <div class="arrow_bt"><a href="#"><i class="fa fa-arrow-right"></i></a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="images/about-img.png"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital">Rice <br><span style="color: #980200;">chicken</span></h1>
+                           <p class="banner_text">Rice does not contain gluten, so is suitable for people on a gluten-free diet. Rice is a good source of protein and a staple food in many parts of the world.</p>
+                           <div class="btn_main">
+                              <div class="started_text"><a href="recipes.html">Read More</a></div>
+                              <div class="arrow_bt"><a href="recipes.html"><i class="fa fa-arrow-right"></i></a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="images/img-1.png"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container-fluid">
+            <div class="about_taital_main">
+               <div class="about_left">
+                  <div class="about_img_1"><img src="images/about-img1.png"></div>
+               </div>
+               <div class="about_middle">
+                  <div class="about_taital">About Us</div>
+                  <p class="about_text">Rice is a staple in Indian Cuisine. Obviously, apart from simple steamed rice, a variety of rice dishes are made in Indian cuisine. In this category, you will find vegetarian and vegan rice recipes. Some of the rice recipes are naturally gluten-free too.
+
+                     We have steamed rice with lentils (dal) and curries. Apart from steamed rice being cooked in almost every household, there are some other standalone recipes that are exclusively made with rice.</p>
+                  <div class="btn_main">
+                     <div class="started_text"><a href="#">Read More</a></div>
+                     <div class="arrow_bt"><a href="#"><i class="fa fa-arrow-right"></i></a></div>
+                  </div>
+               </div>
+               <div class="about_right">
+                  <div class="about_img"><img src="images/about-img.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- menu section start -->
+      <div class="menu_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="menu_taital">Our Menu</h1>
+               </div>
+            </div>
+            <div class="menu_section_2">
+               <div class="row">
+                  <div class="col-md-6 padding_right0">
+                     <div class="menu_box">
+                        <h1 class="recipe_text">01 Recipe</h1>
+                        <div class="manu_main">
+                           <div class="img_1"><img src="images/img-2.png" style="height: 85px; width: auto;" alt="Rice Mixer"><span class="mixer_text">Chicken rice mixer</span></div>
+                           <h4 class="rate_text">₹200</h4>
+                        </div>
+                        <p class="lorem_text">
+                           A chicken rice mixer isn't a common term, but it could refer to a kitchen device or recipe process for combining chicken and rice in a dish. If you're thinking about a dish or method that mixes cooked chicken with rice and other ingredients, here’s a simple idea for creating a flavorful Chicken Rice Mixer dish.</p>
+                        <h1 class="recipe_text">02 Recipe</h1>
+                        <div class="manu_main">
+                           <div class="img_1">
+                              <img src="images/about-img1.png" style="height: 75px; width: auto;" alt="Rice Mixer">
+                              <span class="mixer_text">veg chicken rice</span>
+                          </div>
+                           <h4 class="rate_text">₹230</h4>
+                        </div>
+                        <p class="lorem_text">"Veg chicken rice" typically refers to a vegetarian alternative to chicken rice, where plant-based or mock chicken is used instead of real chicken. It is a great option for vegetarians or those who enjoy plant-based meals but still want the texture and flavor of chicken rice.This recipe gives the essence of traditional chicken rice. </p>
+                     </div>
+                  </div>
+                  <div class="col-md-6 padding_left0">
+                     <div class="menu_box">
+                        <h1 class="recipe_text">03 Recipe</h1>
+                        <div class="manu_main">
+                           <div class="img_1"><img src="images/img-1.png" style="height: 60px; width: auto;" alt="Rice Mixer"><span class="mixer_text">chicken rice</span></div>
+                           <h4 class="rate_text">₹100</h4>
+                        </div>
+                        <p class="lorem_text">Chicken rice is a popular dish in many parts of Asia, particularly in Southeast Asia, where it is a staple in countries like Singapore, Malaysia, and Thailand. It typically consists of poached or roasted chicken served over fragrant rice cooked in chicken broth, along with various accompaniments and sauces.</p>
+                        <h1 class="recipe_text">04 Recipe</h1>
+                        <div class="manu_main">
+                           <div class="img_1"><img src="images/img-2.png"><span class="mixer_text">Rice Mixer</span></div>
+                           <h4 class="rate_text">₹260</h4>
+                        </div>
+                        <p class="lorem_text">A rice mixer typically refers to a kitchen appliance or tool used to mix rice with other ingredients, particularly in recipes like sushi rice or fried rice where uniform mixing is important. It can also refer to the process of combining rice with seasonings, sauces, or other ingredients, distribution of flavor.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="btn_main_1">
+               <div class="read_bt"><a href="#">Read More</a></div>
+               <div class="arrow_bt"><a href="#"><i class="fa fa-arrow-right"></i></a></div>
+            </div>
+         </div>
+      </div>
+      <!-- menu section start -->
+      <!-- read section start -->
+      <div class="read_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="read_text">GET STARTED READY</div>
+               </div>
+            </div>
+            <div class="mail_main">
+               <div class="form-group">
+                  <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comment" name="Enter Your Email"></textarea>
+                  <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right"></i></a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- read section start -->
+      <!-- testimonial section start -->
+      <div class="testimonial_section layout_padding">
+         <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="testimonial_taital">What Is Says Our Clients</h1>
+                           <p class="testimonial_text">
+                              Clients rave about the delicious flavors and fresh ingredients in our dishes. They appreciate the beautiful presentation that enhances their dining experience. However, some mention the need for consistency in meal quality. Overall, they love the variety and unique options on the menu!</p>
+                           <div class="client_img"><img src="images/client-img.png"></div>
+                           <h4 class="client_name">Daniel Alex</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="testimonial_taital">What Is Says Our Clients</h1>
+                           <p class="testimonial_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                           <div class="client_img"><img src="images/client-img.png"></div>
+                           <h4 class="client_name">Hazel Aaron</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="testimonial_taital">What Is Says Our Clients</h1>
+                           <p class="testimonial_text">Customers often express their delight in the authentic taste of our food, highlighting how it reminds them of home-cooked meals. They also appreciate the friendly service that makes each visit special. Many mention the cozy atmosphere, perfect for family gatherings. Overall, our clients consistently recommend us for a satisfying dining experience!</p>
+                           <div class="client_img"><img src="images/client-img.png"></div>
+                           <h4 class="client_name">Colton Edward</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="testimonial_taital">What Is Says Our Clients</h1>
+                           <p class="testimonial_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                           <div class="client_img"><img src="images/client-img.png"></div>
+                           <h4 class="client_name">Jacksmith sand</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- testimonial section end -->
+      <!-- contact section start -->
+      <div class="contact_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="contact_taital">Contact Us</h1>
+               </div>
+            </div>
+            <div class="contact_section_2">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="mail_section">
+                        <form action="save_contact.php" method="POST"> <!-- Point to your PHP script -->
+                           <input type="text" class="mail_text" placeholder="Name" name="name" required>
+                           <input type="text" class="mail_text" placeholder="Phone Number" name="phone" required>
+                           <input type="email" class="mail_text" placeholder="Email" name="email" required>
+                           <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="message" required></textarea>
+                           <button type="submit" class="send_bt">Send</button> <!-- Change to button element -->
+                       </form>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                     <div class="location_text">
+                        <ul>
+                           <li>
+                              <a href="#"><span class="padding_15"><img src="images/map-icon.png"></span>Gb road 123 london Uk  </a>
+                           </li>
+                           <li>
+                              <a href="#"><span class="padding_15"><img src="images/call-icon.png"></span>1234567890</a>
+                           </li>
+                           <li>
+                              <a href="#"><span class="padding_15"><img src="images/mail-icon.png"></span>sow@gmail.com</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="map_main">
+               <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="368" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- contact section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2024 All Rights Reserved. Design by <a href="https://html.design">Kingrice</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+      <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+   </body>
+</html>
